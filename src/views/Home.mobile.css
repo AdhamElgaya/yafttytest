@@ -1,0 +1,366 @@
+/**
+ * Homepage — phone layout only (≤768px).
+ * Single source of truth; keep this file focused and readable.
+ */
+@media (max-width: 768px) {
+  .home-new .home-first-screen {
+    min-height: calc(100dvh - var(--navbar-height));
+    min-height: calc(100svh - var(--navbar-height));
+  }
+
+  .home-new .hero-scroll-indicator {
+    bottom: max(24px, env(safe-area-inset-bottom, 0px));
+  }
+
+  .home-new .hero-scroll-indicator-mouse {
+    width: 28px;
+    height: 46px;
+  }
+
+  /* —— Hero: full screen — content mid-page, gap below buttons, About on scroll —— */
+  .home-new .hero-new {
+    padding: 0 20px;
+    background: linear-gradient(180deg, #f8fafc 0%, #e8eef5 100%);
+    min-height: calc(100dvh - var(--navbar-height));
+    min-height: calc(100svh - var(--navbar-height));
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .home-new .hero-container,
+  .home-new .hero-container--ar,
+  .home-new [lang='ar'] .hero-container {
+    flex: 1;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center;
+    gap: 0 !important;
+    width: 100%;
+    min-height: 0;
+    /* Empty band below buttons (scroll hint) — see mockup */
+    padding-bottom: 19vh;
+    padding-top: 6vh;
+    box-sizing: border-box;
+  }
+
+  .home-new .hero-visual-new {
+    display: none !important;
+  }
+
+  .home-new [lang='ar'] .hero-badge {
+    justify-content: center !important;
+  }
+
+  .home-new .hero-content-new,
+  .home-new .hero-content--ar,
+  .home-new [lang='ar'] .hero-content-new {
+    order: 1;
+    flex: none !important;
+    width: 100%;
+    max-width: 100%;
+    text-align: center !important;
+    align-items: center !important;
+    padding-top: 0;
+  }
+
+  .home-new .hero-content--ar {
+    direction: rtl;
+  }
+
+  .home-new .hero-content--ar .hero-badge {
+    justify-content: center !important;
+  }
+
+  .home-new .hero-badge {
+    font-size: 12px;
+    padding: 6px 14px;
+    margin-bottom: 18px;
+    margin-top: 0;
+  }
+
+  .home-new .hero-title-new {
+    font-size: 1.875rem;
+    line-height: 1.28;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .home-new .hero-content--ar .hero-title-new {
+    font-size: 2.125rem;
+    line-height: 1.22;
+  }
+
+  .home-new .hero-desc-new {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    margin-bottom: 28px;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+
+  .home-new .hero-actions-new,
+  .home-new .hero-actions--ar {
+    flex-direction: column !important;
+    align-items: center !important;
+    align-self: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: min(272px, 86vw) !important;
+    max-width: min(272px, 86vw);
+    direction: inherit;
+  }
+
+  .home-new .hero-action-item {
+    width: 100%;
+  }
+
+  .home-new .btn-primary-new,
+  .home-new .btn-secondary-new {
+    width: 100%;
+    min-height: 48px;
+    padding: 14px 18px;
+    font-size: 15px;
+    border-radius: 12px;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .home-new .hero-actions--ar .btn-primary-new,
+  .home-new .hero-actions--ar .btn-secondary-new {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* —— About block (revealed on scroll) —— */
+  .home-new .content-new {
+    margin: 32px 16px 24px;
+    padding: 28px 18px;
+    border-radius: 16px;
+    scroll-margin-top: 12px;
+  }
+
+  .home-new .content-desc-new {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .home-new .content-grid-new {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 0;
+  }
+
+  .home-new .content-card-new {
+    min-width: 0;
+    max-width: 100%;
+    flex: 1 1 auto;
+    padding: 20px 16px;
+  }
+
+  .home-new .content-card-new h3 {
+    font-size: 1.05rem;
+  }
+
+  .home-new .content-card-new p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  /* —— Features —— */
+  .home-new .features-new,
+  .home-new .steps-section-new {
+    padding: 32px 20px 28px;
+  }
+
+  .home-new .section-title-new {
+    font-size: 1.375rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  .home-new .features-grid-new {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .home-new .feature-card-new {
+    padding: 22px 18px;
+    text-align: center;
+    border-radius: 14px;
+    -webkit-tap-highlight-color: transparent;
+    transition: none;
+  }
+
+  .home-new .feature-card-new:hover,
+  .home-new .feature-card-new:active,
+  .home-new .feature-card-new:focus {
+    background: #f8fafc !important;
+    box-shadow: 0 2px 12px rgba(18, 58, 143, 0.06) !important;
+    transform: none !important;
+  }
+
+  body.dark-mode .home-new .feature-card-new:hover,
+  body.dark-mode .home-new .feature-card-new:active,
+  body.dark-mode .home-new .feature-card-new:focus {
+    background: #23272f !important;
+    box-shadow: 0 8px 32px rgba(18, 58, 143, 0.13), 0 2px 8px rgba(0, 0, 0, 0.18) !important;
+    transform: none !important;
+  }
+
+  .home-new .feature-card-new *,
+  .home-new .content-card-new *,
+  .home-new .steps-card-new * {
+    cursor: default !important;
+  }
+
+  .home-new .btn-primary-new:hover,
+  .home-new .btn-secondary-new:hover,
+  .home-new .testimonial-card-new:hover,
+  .home-new .content-card-new:hover,
+  .home-new .steps-card-new:hover {
+    transform: none !important;
+    box-shadow: inherit;
+  }
+
+  .home-new .btn-primary-new:hover .btn-icon,
+  .home-new .btn-secondary-new:hover .btn-icon {
+    transform: none !important;
+  }
+
+  .home-new .feature-icon-new {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .home-new .feature-card-new h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .home-new .feature-card-new p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  /* —— Steps —— */
+  .home-new .steps-grid-new {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .home-new .steps-grid-new::before {
+    display: none;
+  }
+
+  .home-new .steps-card-new {
+    max-width: 100%;
+    padding: 22px 16px;
+    border-radius: 16px;
+  }
+
+  .home-new .steps-card-new h3 {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+  }
+
+  .home-new .step-item-new {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    gap: 14px;
+    border-radius: 12px;
+    -webkit-tap-highlight-color: transparent;
+    transition: none;
+  }
+
+  .home-new .step-item-new:hover,
+  .home-new .step-item-new:active,
+  .home-new .step-item-new:focus {
+    background: #f8fafc !important;
+    box-shadow: 0 2px 12px rgba(18, 58, 143, 0.06) !important;
+    transform: none !important;
+  }
+
+  body.dark-mode .home-new .step-item-new:hover,
+  body.dark-mode .home-new .step-item-new:active,
+  body.dark-mode .home-new .step-item-new:focus {
+    background: #232a36 !important;
+    box-shadow: 0 2px 12px rgba(18, 58, 143, 0.1) !important;
+    border-color: #232f3e !important;
+  }
+
+  .home-new .steps-card-new:hover,
+  .home-new .steps-card-new:active {
+    transform: none !important;
+    box-shadow: 0 8px 32px rgba(18, 58, 143, 0.1) !important;
+  }
+
+  .home-new .step-number-new.step-icon-new {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 1.1rem;
+  }
+
+  /* —— Footer (mobile only) —— */
+  .home-new .footer-modern {
+    margin-top: 24px;
+    margin-bottom: 0;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .home-new .footer-new .footer-bottom {
+    padding-bottom: max(18px, env(safe-area-inset-bottom, 0px));
+  }
+
+  .home-new .footer-content-new,
+  .home-new .footer-content-modern {
+    padding: 36px 20px 20px;
+    gap: 20px;
+  }
+
+  .home-new .footer-new .footer-logo-new {
+    font-size: 1.65rem;
+  }
+
+  .home-new .footer-tagline {
+    font-size: 0.9375rem;
+  }
+
+  .home-new .footer-new .footer-nav-links {
+    gap: 12px 18px;
+  }
+
+  .home-new .footer-new .footer-nav-links a {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-new {
+    --navbar-height: 56px;
+  }
+}
+
+@media (max-width: 380px) {
+  .home-new .hero-container,
+  .home-new .hero-container--ar {
+    padding-bottom: 15vh;
+    padding-top: 5vh;
+  }
+
+  .home-new .hero-title-new {
+    font-size: 1.625rem;
+  }
+
+  .home-new .hero-content--ar .hero-title-new {
+    font-size: 1.875rem;
+  }
+
+  .home-new .hero-actions-new,
+  .home-new .hero-actions--ar {
+    width: min(256px, 88vw) !important;
+    max-width: min(256px, 88vw);
+  }
+}

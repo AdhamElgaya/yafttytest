@@ -1,0 +1,105 @@
+.yaftty-legacy-footer.footer {
+  background: #123a8f;
+  color: #fff;
+  padding: 48px 0 24px 0;
+  margin-top: 64px;
+  font-family: var(--font-family);
+}
+
+.yaftty-legacy-footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.yaftty-legacy-footer .footer-section h3.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.yaftty-legacy-footer .footer-section h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.yaftty-legacy-footer .footer-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.yaftty-legacy-footer .footer-links {
+  display: block;
+  margin-bottom: 0;
+}
+
+.yaftty-legacy-footer .footer-links li {
+  margin-bottom: 8px;
+}
+
+.yaftty-legacy-footer .footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.yaftty-legacy-footer .footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.yaftty-legacy-footer .footer-links a:focus {
+  outline: none;
+}
+
+.yaftty-legacy-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
+  padding-top: 24px;
+}
+
+.yaftty-legacy-footer .footer-bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.yaftty-legacy-footer .footer-bottom p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.yaftty-legacy-footer .footer-bottom-links {
+  display: flex;
+  gap: 24px;
+}
+
+.yaftty-legacy-footer .footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.yaftty-legacy-footer .footer-bottom-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.yaftty-legacy-footer .footer-bottom-links a:focus {
+  outline: none;
+}

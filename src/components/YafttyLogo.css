@@ -1,0 +1,106 @@
+.yaftty-logo-text {
+  font-weight: 900;
+  color: #123a8f;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  line-height: 1.15;
+  font-family: var(--font-family);
+}
+
+html[lang='ar'] .yaftty-logo-text,
+body[data-font='arabic'] .yaftty-logo-text {
+  font-family: var(--font-family-ar) !important;
+  letter-spacing: 0;
+}
+
+.yaftty-logo-text--navbar {
+  font-size: 3.35rem;
+}
+
+.yaftty-logo-text--footer {
+  font-size: 2.3rem;
+  color: #fff;
+  margin-bottom: 0;
+  text-shadow: 0 2px 12px rgba(23, 70, 162, 0.1);
+}
+
+.yaftty-logo-text--checkout {
+  font-size: 1.35rem;
+}
+
+.yaftty-logo-text--loader {
+  font-size: 2.4rem;
+  color: #123a8f;
+}
+
+.yaftty-logo-wrap {
+  display: inline-block;
+  line-height: 0;
+}
+
+.yaftty-logo-img {
+  display: block;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.yaftty-logo-img--navbar {
+  max-height: 4.25rem;
+}
+
+.yaftty-logo-img--footer {
+  max-height: 2.75rem;
+}
+
+/* White-on-black footer mark — screen blend hides black on navy footer */
+.yaftty-logo-img--footer-file {
+  max-height: 3.25rem;
+  mix-blend-mode: screen;
+}
+
+.yaftty-logo-img--checkout {
+  max-height: 2rem;
+}
+
+.yaftty-logo-img--loader {
+  max-height: 2.75rem;
+}
+
+.yaftty-logo-img--on-dark {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .yaftty-logo-text--navbar {
+    font-size: 3rem;
+  }
+
+  .yaftty-logo-img--navbar {
+    max-height: 3.65rem;
+  }
+
+  .yaftty-logo-text--checkout,
+  .yaftty-logo-img--checkout {
+    max-height: 1.9rem;
+  }
+
+  .yaftty-logo-text--footer,
+  .yaftty-logo-img--footer {
+    max-height: 2.35rem;
+  }
+
+  .yaftty-logo-img--footer-file {
+    max-height: 2.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .yaftty-logo-text--navbar {
+    font-size: 2.85rem;
+  }
+
+  .yaftty-logo-img--navbar {
+    max-height: 3.35rem;
+  }
+}

@@ -1,0 +1,63 @@
+/**
+ * Mobile only (≤768px): disable sticky :hover tap highlights.
+ * Desktop (≥769px) is untouched — all rules live inside the media query below.
+ */
+
+@media (max-width: 768px) {
+  /* Services, About, Help — not homepage (homepage rules in Home.mobile.css) */
+  .service-card:hover,
+  .value-card:hover,
+  .about-card:hover,
+  .mission-card:hover,
+  .category-card:hover,
+  .faq-item:hover,
+  .faq-question:hover,
+  .contact-card:hover,
+  .search-bar:hover,
+  .ai-assistant-btn:hover,
+  .contact-action:hover,
+  .hero-badge:hover {
+    transform: none !important;
+    box-shadow: inherit;
+  }
+
+  .stat-card:hover,
+  .banner-card:hover,
+  .profile-card:hover,
+  .booking-item:hover,
+  .info-item:hover,
+  .stat-item:hover,
+  .security-item:hover,
+  .preference-item:hover {
+    transform: none !important;
+    box-shadow: inherit;
+  }
+
+  .card:hover,
+  .card:hover::before,
+  .hover-lift:hover {
+    transform: none !important;
+    box-shadow: inherit;
+    opacity: inherit;
+  }
+
+  .map-add-banner-fab:hover,
+  .map-fab:hover,
+  .map-filter-chip:hover,
+  .booking-cart-info-btn:hover,
+  .booking-cart-remove-btn:hover,
+  .checkout-header-cart:hover {
+    transform: none !important;
+  }
+
+  .footer-new .footer-nav-links a:hover,
+  .footer-new .footer-social a:hover {
+    transform: none !important;
+  }
+
+  .chat-close:hover,
+  .chat-attach-btn:hover,
+  .help-link:hover {
+    transform: none !important;
+  }
+}

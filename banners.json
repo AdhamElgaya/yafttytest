@@ -1,0 +1,13 @@
+{
+    "title": "Test Banner",
+    "type": "RGB",
+    "location": "Cairo",
+    "coordinates": [ 29.896385116730755,
+    31.199869433658364],
+    "price": 5000,
+    "priceUnit": "month",
+    "description": "Test banner in Cairo",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+    "owner": "Test Owner",
+    "availability": { "isAvailable": true }
+  }

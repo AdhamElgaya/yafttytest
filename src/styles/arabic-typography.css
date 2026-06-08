@@ -1,0 +1,86 @@
+/**
+ * IBM Plex Sans Arabic for the full UI when language is Arabic.
+ * Loaded via index.css @import; applied when html[lang='ar'] or body[data-font='arabic'].
+ */
+
+html[lang='ar'],
+html.lang-ar {
+  --font-family: var(--font-family-ar);
+  font-family: var(--font-family-ar);
+}
+
+html[lang='ar'] body,
+html.lang-ar body,
+html[lang='ar'] .App,
+html.lang-ar .App,
+html[dir='rtl'] body,
+html[dir='rtl'] .App,
+body[data-font='arabic'],
+body[data-font='arabic'] .App {
+  font-family: var(--font-family-ar) !important;
+}
+
+/* Text UI — exclude icon/svg/map canvas nodes */
+html[lang='ar'] :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    a,
+    li,
+    ul,
+    ol,
+    label,
+    input,
+    textarea,
+    select,
+    button,
+    option,
+    td,
+    th,
+    div,
+    strong,
+    em,
+    small,
+    cite,
+    blockquote,
+    figcaption,
+    legend,
+    fieldset,
+    .auth-title,
+    .auth-input,
+    .auth-footer,
+    .navbar-link-new,
+    .navbar-link-text,
+    .logo-text-new,
+    .navbar-logo-text,
+    .account-type-content,
+    .account-type-btn,
+    .footer-new,
+    .footer-logo-new,
+    .footer-tagline,
+    .map-filters-panel,
+    .verify-container,
+    .profile-container,
+    .dashboard-container,
+    .help-container,
+    .banner-verification-container,
+    .toast,
+    [class*='toast']
+  ):not(svg):not(path):not(circle):not(rect):not(line):not(polygon):not(g):not(canvas):not(.mapboxgl-canvas):not(.mapboxgl-ctrl):not(.mapboxgl-ctrl-group) {
+  font-family: var(--font-family-ar) !important;
+}
+
+/* Overrides that hard-code Inter / system UI */
+html[lang='ar'] .otp-input-cell,
+body[data-font='arabic'] .otp-input-cell {
+  font-family: var(--font-family-ar) !important;
+}
+
+html[lang='ar'] .mapboxgl-popup-content {
+  font-family: var(--font-family-ar) !important;
+}

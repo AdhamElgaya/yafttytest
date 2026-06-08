@@ -1,0 +1,111 @@
+/**
+ * Global responsive scaling — fluid typography, spacing, and layout helpers.
+ * Breakpoints: tablet ≤768px, mobile ≤480px
+ */
+
+:root {
+  --bp-tablet: 768px;
+  --bp-mobile: 480px;
+
+  /* Fluid page layout */
+  --page-padding-x: clamp(1rem, 4vw, 2rem);
+  --page-padding-y: clamp(1.5rem, 4vw, 2.5rem);
+  --section-gap: clamp(1.5rem, 4vw, 3rem);
+
+  /* Fluid typography (overrides fixed sizes on smaller screens) */
+  --text-display: clamp(2rem, 5vw + 1rem, 3.5rem);
+  --text-h1: clamp(1.75rem, 4vw + 0.75rem, 2.8rem);
+  --text-h2: clamp(1.4rem, 3vw + 0.5rem, 2rem);
+  --text-h3: clamp(1.15rem, 2vw + 0.5rem, 1.5rem);
+  --text-body: clamp(0.9375rem, 1vw + 0.8rem, 1rem);
+  --text-body-lg: clamp(1rem, 1.5vw + 0.75rem, 1.25rem);
+  --text-small: clamp(0.8125rem, 0.5vw + 0.75rem, 0.875rem);
+
+  /* Fluid component sizing */
+  --btn-padding-y: clamp(0.75rem, 2vw, 1rem);
+  --btn-padding-x: clamp(1.25rem, 4vw, 2rem);
+  --card-padding: clamp(1rem, 3vw, 2rem);
+  --grid-gap: clamp(1rem, 3vw, 2rem);
+}
+
+/* Apply fluid headings globally */
+h1,
+.section-title {
+  font-size: var(--text-h1);
+}
+
+h2,
+.section-subtitle {
+  font-size: var(--text-h2);
+}
+
+h3 {
+  font-size: var(--text-h3);
+}
+
+body {
+  font-size: var(--text-body);
+}
+
+/* Responsive grid utilities */
+@media (max-width: 768px) {
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4,
+  .grid-cols-5,
+  .grid-cols-6 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-cols-2-tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-cols-2-tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Touch-friendly tap targets on mobile */
+@media (max-width: 768px) {
+  button,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline,
+  .btn-primary-new,
+  .btn-secondary-new,
+  a[role='button'] {
+    min-height: 44px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
+}
+
+/* Hide / show by breakpoint */
+.hide-mobile {
+  display: revert;
+}
+
+.show-mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-mobile-only {
+    display: revert !important;
+  }
+
+  .hide-tablet {
+    display: none !important;
+  }
+}
